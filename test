@@ -1,0 +1,20 @@
+import tkinter as tk
+difficulty_var = 1
+def submit():
+    difficulty = difficulty_var
+    print("Difficulty selected:", difficulty)
+
+def main():
+    window = tk.Tk()
+    window.geometry('250x150')
+    window.title("Select Difficulty")
+    tk.Label(window, text="Select difficulty:").pack()
+    difficulty_var = tk.StringVar()
+    tk.Radiobutton(window, text="Easy", variable=difficulty_var, value="Easy").pack()
+    tk.Radiobutton(window, text="Medium", variable=difficulty_var, value="Medium").pack()
+    tk.Radiobutton(window, text="Hard", variable=difficulty_var, value="Hard").pack()
+    tk.Button(window, text="Submit", command=submit).pack()
+    window.mainloop()
+
+main()
+
