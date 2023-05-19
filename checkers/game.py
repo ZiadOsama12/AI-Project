@@ -2,7 +2,7 @@ from .constants import RED, WHITE, BLUE
 from checkers.board import Board
 
 class Game:
-    def init(self):
+    def __init__(self):
         self._init()
 
     def _init(self):
@@ -13,7 +13,7 @@ class Game:
 
     def winner(self):
         return self.board.winner()
-
+    
     def set_board(self, board):
         self.board.set_board(board)
 

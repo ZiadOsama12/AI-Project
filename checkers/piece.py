@@ -3,7 +3,7 @@ from .constants import RED, WHITE, GREY
 class Piece:
 
 
-    def init(self, row, col, color):
+    def __init__(self, row, col, color):
         self.row = row
         self.col = col
         self.color = color
@@ -13,13 +13,13 @@ class Piece:
 
     def make_king(self):
         self.king = True
-
+    
     def is_king(self):
         return self.king
-
-    def move(self, row, col): # move some piece
+    
+    def move(self, row, col): # move some piece 
         self.row = row
         self.col = col
 
-    def repr(self):
+    def __repr__(self):
         return str(self.color)
